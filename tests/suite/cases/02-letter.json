@@ -1,0 +1,16 @@
+{
+  "name": "Letter",
+  "file": "letter.txt",
+  "tag": false,
+  "scoreSame": true,
+  "expect": {
+    "chapters": 0,
+    "sections": 0,
+    "minParagraphs": 8,
+    "minSentences": 31,
+    "rhythmSpread": true,
+    "wordIncludes": ["the", "of"],
+    "wordExcludes": ["whilst"],
+    "tagged": false
+  }
+}

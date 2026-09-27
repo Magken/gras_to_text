@@ -1,0 +1,15 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Magken/gras_to_text",
+  "title": "GRAS to text",
+  "description": "Measure a text and render how it is written.",
+  "version": "0.0.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@gras/gras_to_text",
+      "version": "0.0.0",
+      "transport": { "type": "stdio" }
+    }
+  ]
+}

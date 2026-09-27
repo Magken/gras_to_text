@@ -1,0 +1,36 @@
+{
+  "name": "@gras/gras_to_text",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Measure a text and render how it is written.",
+  "type": "module",
+  "mcpName": "io.github.Magken/gras_to_text",
+  "bin": {
+    "gras-to-text-mcp": "./dist/mcp.js"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "profile": "tsx cli.mjs profile",
+    "score": "tsx cli.mjs score",
+    "dictionary": "tsx cli.mjs dictionary",
+    "test": "tsx ../tests/run.mjs",
+    "suite": "tsx ../tests/suite/suite.unit.mjs",
+    "mcp": "tsx mcp.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.0",
+    "@modelcontextprotocol/sdk": "^1.30.1",
+    "mammoth": "^1.12.3",
+    "unpdf": "^1.8.1",
+    "zod": "^4.6.5"
+  }
+}

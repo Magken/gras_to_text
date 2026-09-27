@@ -1,0 +1,16 @@
+{
+  "name": "gras_to_text",
+  "private": true,
+  "license": "MIT",
+  "description": "Measure a text and render how it is written.",
+  "scripts": {
+    "prepare": "npm install --prefix ts",
+    "check": "npm run check --prefix ts",
+    "test": "npm test --prefix ts",
+    "suite": "npm run suite --prefix ts",
+    "profile": "npm run profile --prefix ts --",
+    "score": "npm run score --prefix ts --",
+    "dictionary": "npm run dictionary --prefix ts --",
+    "mcp": "npm run mcp --prefix ts"
+  }
+}

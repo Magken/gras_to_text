@@ -1,0 +1,241 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gras_to_text",
+  "title": "TextProfile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "lexical",
+    "syntactic",
+    "semantic",
+    "functional",
+    "structural",
+    "content",
+    "language",
+    "guide"
+  ],
+  "properties": {
+    "lexical": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["functionWords", "diversity", "rhythm"],
+      "properties": {
+        "functionWords": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["feature", "rate"],
+            "properties": {
+              "feature": { "type": "string" },
+              "rate": { "type": "number" },
+              "z": { "type": "number" }
+            }
+          }
+        },
+        "diversity": { "type": "number" },
+        "rhythm": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["q1", "q2", "q3", "afterLong"],
+          "properties": {
+            "q1": { "type": "number" },
+            "q2": { "type": "number" },
+            "q3": { "type": "number" },
+            "afterLong": { "type": "number" },
+            "spoken": { "type": "number" }
+          }
+        },
+        "register": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["long", "longWords", "marked"],
+          "properties": {
+            "long": { "type": "number", "description": "Share of words with three or more syllables." },
+            "longWords": { "type": "array", "items": { "type": "string" } },
+            "marked": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["word", "count", "kind"],
+                "properties": {
+                  "word": { "type": "string" },
+                  "count": { "type": "number" },
+                  "kind": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "syntactic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tagRates", "sentenceStarts"],
+      "properties": {
+        "tagRates": {
+          "type": "object",
+          "additionalProperties": { "type": "number" }
+        },
+        "sentenceStarts": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "arrangements": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/arrangement" }
+        },
+        "joins": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["simple", "compound", "complex", "fragment"],
+          "properties": {
+            "simple": { "type": "number" },
+            "compound": { "type": "number" },
+            "complex": { "type": "number" },
+            "fragment": { "type": "number" }
+          }
+        },
+        "punctuation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["comma", "semicolon", "colon", "dash", "quote"],
+          "properties": {
+            "comma": { "type": "number" },
+            "semicolon": { "type": "number" },
+            "colon": { "type": "number" },
+            "dash": { "type": "number" },
+            "quote": { "type": "number" },
+            "withComma": { "type": "number" },
+            "beforeJoin": { "type": "number" }
+          }
+        },
+        "figures": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["chain", "reread", "maxim", "examples"],
+          "properties": {
+            "chain": { "type": "number" },
+            "reread": { "type": "number" },
+            "maxim": { "type": "number" },
+            "examples": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "chain": { "type": "string" },
+                "reread": { "type": "string" },
+                "maxim": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "semantic": { "type": "object", "additionalProperties": false },
+    "functional": { "$ref": "#/$defs/usageDictionary" },
+    "structural": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "paragraphs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["sentences", "words", "lengths", "opening", "longest", "closing"],
+            "properties": {
+              "sentences": { "type": "number" },
+              "words": { "type": "number" },
+              "lengths": { "type": "array", "items": { "type": "number" }, "description": "Words in each sentence, in order." },
+              "joined": { "type": "number" },
+              "opening": { "type": "string" },
+              "longest": { "type": "string" },
+              "closing": { "type": "string", "description": "The last sentence." }
+            }
+          }
+        }
+      }
+    },
+    "content": { "$ref": "#/$defs/usageDictionary" },
+    "language": { "type": "object", "additionalProperties": false },
+    "guide": {
+      "type": "array",
+      "description": "The sheet, largest unit first. Leave out a level the text does not have.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["level", "text"],
+        "properties": {
+          "level": {
+            "enum": ["chapter", "section", "paragraph", "sentence", "word"]
+          },
+          "text": { "type": "string" },
+          "subject": {
+            "type": "string",
+            "description": "Subject words and names. Rendered only when the reply keeps the source's subject."
+          },
+          "excerpt": { "type": "string" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "wordUse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tag", "count"],
+      "properties": {
+        "tag": { "type": "string" },
+        "count": { "type": "number" }
+      }
+    },
+    "dictionaryWord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["word", "count", "uses"],
+      "properties": {
+        "word": { "type": "string" },
+        "count": { "type": "number" },
+        "uses": { "type": "array", "items": { "$ref": "#/$defs/wordUse" } }
+      }
+    },
+    "usageDictionary": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "words": { "type": "array", "items": { "$ref": "#/$defs/dictionaryWord" } },
+        "names": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "count"],
+            "properties": {
+              "name": { "type": "string" },
+              "count": { "type": "number" }
+            }
+          }
+        }
+      }
+    },
+    "arrangement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["chain", "tags", "type", "count", "meaning", "example", "topics", "paragraphs"],
+      "properties": {
+        "chain": { "type": "string" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "type": { "enum": ["simple", "compound", "complex", "fragment"] },
+        "count": { "type": "number" },
+        "meaning": { "type": "string" },
+        "example": { "type": "string" },
+        "topics": { "type": "array", "items": { "type": "string" } },
+        "paragraphs": { "type": "array", "items": { "type": "number" } },
+        "opens": { "type": "number", "description": "Sentences with this shape that open a paragraph." },
+        "closes": { "type": "number", "description": "Sentences with this shape that close a paragraph of two or more." }
+      }
+    }
+  }
+}

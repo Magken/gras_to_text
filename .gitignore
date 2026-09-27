@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.cache/
+_tmp-suite-results/
+.probe-*.mjs
+research/papers/
+py/.venv/
+output/*
+!output/.gitkeep

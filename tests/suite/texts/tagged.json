@@ -1,0 +1,62 @@
+{
+  "chapters": [
+    {
+      "title": "Yard",
+      "sections": [
+        {
+          "title": "Morning",
+          "paragraphs": [
+            "The queue kept its shape in the rain. They were seen from the yard. A man with a yellow bag waited under the awning.",
+            "She wrote the hour and the colour. The third column was left blank. Mr Pell did not fill it."
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Shop",
+      "sections": [
+        {
+          "title": "The letter",
+          "paragraphs": [
+            "The shop wanted six bowls by the first of the month. She wrote the date and the price. The pots were seen through the vent.",
+            "A train passed and the racks clicked. Nobody looked up. She locked the gate after the others had gone."
+          ]
+        }
+      ]
+    }
+  ],
+  "paragraphs": [
+    {
+      "text": "The queue kept its shape in the rain. They were seen from the yard. A man with a yellow bag waited under the awning.",
+      "sentences": [
+        { "text": "The queue kept its shape in the rain.", "tags": ["DT", "NN", "VBD", "PRP$", "NN", "IN", "DT", "NN"] },
+        { "text": "They were seen from the yard.", "tags": ["PRP", "VBD", "VBN", "IN", "DT", "NN"] },
+        { "text": "A man with a yellow bag waited under the awning.", "tags": ["DT", "NN", "IN", "DT", "JJ", "NN", "VBD", "IN", "DT", "NN"] }
+      ]
+    },
+    {
+      "text": "She wrote the hour and the colour. The third column was left blank. Mr Pell did not fill it.",
+      "sentences": [
+        { "text": "She wrote the hour and the colour.", "tags": ["PRP", "VBD", "DT", "NN", "CC", "DT", "NN"] },
+        { "text": "The third column was left blank.", "tags": ["DT", "JJ", "NN", "VBD", "VBN", "JJ"] },
+        { "text": "Mr Pell did not fill it.", "tags": ["NNP", "NNP", "VBD", "RB", "VB", "PRP"] }
+      ]
+    },
+    {
+      "text": "The shop wanted six bowls by the first of the month. She wrote the date and the price. The pots were seen through the vent.",
+      "sentences": [
+        { "text": "The shop wanted six bowls by the first of the month.", "tags": ["DT", "NN", "VBD", "CD", "NNS", "IN", "DT", "JJ", "IN", "DT", "NN"] },
+        { "text": "She wrote the date and the price.", "tags": ["PRP", "VBD", "DT", "NN", "CC", "DT", "NN"] },
+        { "text": "The pots were seen through the vent.", "tags": ["DT", "NNS", "VBD", "VBN", "IN", "DT", "NN"] }
+      ]
+    },
+    {
+      "text": "A train passed and the racks clicked. Nobody looked up. She locked the gate after the others had gone.",
+      "sentences": [
+        { "text": "A train passed and the racks clicked.", "tags": ["DT", "NN", "VBD", "CC", "DT", "NNS", "VBD"] },
+        { "text": "Nobody looked up.", "tags": ["NN", "VBD", "RB"] },
+        { "text": "She locked the gate after the others had gone.", "tags": ["PRP", "VBD", "DT", "NN", "IN", "DT", "NNS", "VBD", "VBN"] }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "note": "Copy this file to a new name in cases/. Names that start with _ are not run. Point file at a text under texts/. tag true calls the English BERT tagger. tag false keeps supplied tags or leaves the text untagged.",
+  "name": "Name shown when the suite prints",
+  "file": "essay.txt",
+  "tag": false,
+  "background": false,
+  "scoreSame": false,
+  "scoreAgainst": null,
+  "expect": {
+    "chapters": 0,
+    "sections": 0,
+    "minParagraphs": 1,
+    "minSentences": 1,
+    "rhythmSpread": false,
+    "wordIncludes": [],
+    "wordExcludes": [],
+    "keepsSentence": null,
+    "phrase": null,
+    "tagged": false,
+    "opensWith": null,
+    "patternIncludes": null,
+    "pronounAbove": null,
+    "passiveAbove": null,
+    "shorter": false,
+    "usage": false
+  }
+}

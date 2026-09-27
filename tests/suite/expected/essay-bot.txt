@@ -1,0 +1,106 @@
+Essay difference. The source is essay.txt. The flat reply is essay-flat.txt. The repaired reply is essay-repaired.txt.
+All three were tagged. The dictionary and the sentence shapes come from the source.
+
+=== Dictionary: words with the tags they take ===
+9	still	ADV 9
+7	blank	ADJ 5, NOUN 2
+7	column	NOUN 7
+6	then	ADV 6
+6	yard	NOUN 6
+5	book	NOUN 5
+5	buyer	NOUN 5
+5	third	ADJ 5
+4	clay	NOUN 4
+4	enough	ADJ 2, ADV 2
+4	had	VERB 4
+4	mr	PROPN 4
+
+=== Dictionary: names ===
+4	Mr. Pell
+3	Mrs. Adel
+2	Dr. Hale
+2	Thursday
+1	Monday
+
+=== Arrangement dictionary: sentence shapes ===
+13	simple	determiner then noun then auxiliary	paragraphs 6, 7, 8, 9, 10, 11, 13	topics (spread across the text)
+	The columns were for the room.
+4	compound	determiner then noun then auxiliary	paragraphs 4, 5, 11, 13	topics bench, blank, book
+	The argument was an old one and it had worn a groove, the way a latch wears a groove, and both of them knew which step came next.
+4	simple	pronoun then verb then determiner	paragraphs 3, 5, 6, 11	topics bench, chip, column
+	She walked the length of the drying racks and touched nothing.
+3	simple	determiner then noun then verb	paragraphs 2, 7, 11	topics awning, bell, bench
+	A boy carried shelves from the shed to the wall and set them down too hard.
+3	simple	pronoun then auxiliary then particle	paragraphs 4, 9	topics buyer, afternoon, hinge
+	She did not fill the column.
+3	complex	pronoun then auxiliary then verb	paragraphs 1, 3, 12	topics ash, backs, evening
+	She had written the firing times in a book that smelled of ash.
+3	complex	pronoun then verb then determiner	paragraphs 8, 11, 13	topics bench, blank, book
+	She counted the gaps between the rings of that thread, then stopped counting, because the gaps belonged to the water and not to the book.
+2	simple	determiner then adjective then noun	paragraphs 1, 10	topics argument, ash, backs
+	The first column was the hour.
+
+=== What goes to the bot: write a new text in this shape (generate) ===
+Write in this shape. The subject is yours; take only the shape from the source. The examples are from the source: copy how they are built, not their people, places, or things, and do not reuse any run of four or more of their words. Do not open on the first words of the first example. Start at the largest unit and go down.
+
+Paragraph. Write as long as you are asked to; take rates from here, not the source's length. A paragraph holds about 6.6 sentences. The long sentences (19 words or more) cluster: about 6 in 10 paragraphs hold two or more, and the rest hold one or none. About 4 in 10 paragraphs end on a short sentence; the other 6 in 10 end on a longer one. Writers following a sheet tend to end too many paragraphs on a short line; end most on a full sentence. Such as: "You could keep it if you did not announce it."
+Example: The kiln at the north end of the yard kept its heat through the night, and the bricks ticked as they cooled. Dr. Hale met Mr. Pell and Mrs. Adel before the noon bell, and they stood with their hands behind their backs as if the kiln might still be argued with. She had written the firing times in a book that smelled of ash. The first column was the hour. The second was the colour of the flame. The third was left blank upon purpose, because a blank line was the only honest mark for a thing she had not seen.
+
+Sentence. Mix the lengths: about a quarter of sentences are 6 words or fewer, half fall between 6 and 19, and a quarter run 19 or more. A typical sentence is about 10 words. In every 8 sentences, about 2 run 19 words or more, and the longest reach about 24. Writers following a sheet tend to cut these short; let them run their full length. About 3 in 10 long sentences are followed at once by a short one, of 6 words or fewer; that is where much of the contrast sits. How sentences are built: about 6 in 10 are one clause. About 4 in 10 have two clauses: about 1 in 10 joined with and, but, or so, and about 3 in 10 with a clause hung on because, as, if, that, or who. A few have no main verb. Keep that mix. Do not cut a joined sentence into separate short ones. Commas: about 0.5 per sentence, in about 3 in 10 sentences; most come before and, but, or a clause hung on because or who. There are no semicolons or colons or dashes. Do not add them. About 1 word in 12 is a pronoun (8.5%), fewer than most stories use (about 1 in 9). About 1 in 4 times you would write he, she, or it, name the person or thing instead; keep the rest as pronouns. The passive is rare (0.9%). Say who does the act. Now and then a clause picks up the last word of the clause before, about 2 times in 100 sentences: "He said a blank looked like carelessness to a buyer, and a buyer was coming on Thursday, and Thursday was not a philosophical day." Now and then a statement is followed by a second reading of it, about once in 100 sentences: "The not speaking was a kindness, or it was fatigue, and she decided she did not need to know which." Now and then the narrator states a short general truth in the present tense, about once in 100 sentences: "A plain order can be kept."
+Vary the sentence shapes. These are the most common, each with a sentence from the source:
+- Open by naming the thing, then put was, had, or did before what it did. Keep it to one clause. About 2 in 10 sentences. Example: "The columns were for the room."
+- Open by naming the thing, then put was, had, or did before what it did. Then join a second clause with and, but, or so. About 1 in 15 sentences. Example: "The argument was an old one and it had worn a groove, the way a latch wears a groove, and both of them knew which step came next." It sits in the paragraphs about bench, blank, book.
+- Open on someone already named, and go straight to what they did. The next word is the, a, or this. Keep it to one clause. About 1 in 15 sentences. Example: "She walked the length of the drying racks and touched nothing." It sits in the paragraphs about bench, chip, column.
+- Open by naming the thing, then say what it did. Keep it to one clause. About 1 in 20 sentences. Example: "A boy carried shelves from the shed to the wall and set them down too hard." It sits in the paragraphs about awning, bell, bench.
+- Open on someone already named, then put was, had, or did before the act. The next word is not or to. Keep it to one clause. About 1 in 20 sentences. Example: "She did not fill the column." It sits in the paragraphs about buyer, afternoon, hinge.
+- Open on someone already named, then put was, had, or did before the act. The next word is the main verb. Then hang a clause on because, as, if, that, or who. About 1 in 20 sentences. Example: "She had written the firing times in a book that smelled of ash." It sits in the paragraphs about ash, backs, evening.
+Sentences open with a determiner in about 4 in 10, a pronoun in about 3 in 10, a noun in about 1 in 10. Keep to those openings.
+Example: The pots on the upper rack were pale and dusty.
+
+Word. Glue words, as the source uses them: the about 12 in 100 words, and about 5, a about 4, of about 2, that about 2, to about 1, in about 1. by, from and upon are rare, under 1 in 100 words; use them only now and then. Against ordinary English prose, whose rate per 100 words is in brackets, the source uses more "the" (7), "and" (3), "a" (2), "that" (1); less "of" (4); under half the "to" (3), "in" (2). Hold to the source's rates, not the ordinary ones. These glue words carry the voice. Keep them at about those rates; a reply that drops them sounds clipped. upon is an older, formal word; the source uses it, so keep it, about as often as the source does.
+Example: The book was in the inside pocket of her coat, and the third column was still blank, and the blank was still upon purpose.
+
+=== What goes to the bot: rewrite the source (regenerate) ===
+Write in this shape. This is a rewrite: keep the source's subject, its subject words, and its names. Start at the largest unit and go down.
+
+Paragraph. Write as long as you are asked to; take rates from here, not the source's length. A paragraph holds about 6.6 sentences. The long sentences (19 words or more) cluster: about 6 in 10 paragraphs hold two or more, and the rest hold one or none. About 4 in 10 paragraphs end on a short sentence; the other 6 in 10 end on a longer one. Writers following a sheet tend to end too many paragraphs on a short line; end most on a full sentence. Such as: "You could keep it if you did not announce it."
+Example: The kiln at the north end of the yard kept its heat through the night, and the bricks ticked as they cooled. Dr. Hale met Mr. Pell and Mrs. Adel before the noon bell, and they stood with their hands behind their backs as if the kiln might still be argued with. She had written the firing times in a book that smelled of ash. The first column was the hour. The second was the colour of the flame. The third was left blank upon purpose, because a blank line was the only honest mark for a thing she had not seen.
+
+Sentence. Mix the lengths: about a quarter of sentences are 6 words or fewer, half fall between 6 and 19, and a quarter run 19 or more. A typical sentence is about 10 words. In every 8 sentences, about 2 run 19 words or more, and the longest reach about 24. Writers following a sheet tend to cut these short; let them run their full length. About 3 in 10 long sentences are followed at once by a short one, of 6 words or fewer; that is where much of the contrast sits. How sentences are built: about 6 in 10 are one clause. About 4 in 10 have two clauses: about 1 in 10 joined with and, but, or so, and about 3 in 10 with a clause hung on because, as, if, that, or who. A few have no main verb. Keep that mix. Do not cut a joined sentence into separate short ones. Commas: about 0.5 per sentence, in about 3 in 10 sentences; most come before and, but, or a clause hung on because or who. There are no semicolons or colons or dashes. Do not add them. About 1 word in 12 is a pronoun (8.5%), fewer than most stories use (about 1 in 9). About 1 in 4 times you would write he, she, or it, name the person or thing instead; keep the rest as pronouns. The passive is rare (0.9%). Say who does the act. Now and then a clause picks up the last word of the clause before, about 2 times in 100 sentences: "He said a blank looked like carelessness to a buyer, and a buyer was coming on Thursday, and Thursday was not a philosophical day." Now and then a statement is followed by a second reading of it, about once in 100 sentences: "The not speaking was a kindness, or it was fatigue, and she decided she did not need to know which." Now and then the narrator states a short general truth in the present tense, about once in 100 sentences: "A plain order can be kept."
+Vary the sentence shapes. These are the most common, each with a sentence from the source:
+- Open by naming the thing, then put was, had, or did before what it did. Keep it to one clause. About 2 in 10 sentences. Example: "The columns were for the room."
+- Open by naming the thing, then put was, had, or did before what it did. Then join a second clause with and, but, or so. About 1 in 15 sentences. Example: "The argument was an old one and it had worn a groove, the way a latch wears a groove, and both of them knew which step came next." It sits in the paragraphs about bench, blank, book.
+- Open on someone already named, and go straight to what they did. The next word is the, a, or this. Keep it to one clause. About 1 in 15 sentences. Example: "She walked the length of the drying racks and touched nothing." It sits in the paragraphs about bench, chip, column.
+- Open by naming the thing, then say what it did. Keep it to one clause. About 1 in 20 sentences. Example: "A boy carried shelves from the shed to the wall and set them down too hard." It sits in the paragraphs about awning, bell, bench.
+- Open on someone already named, then put was, had, or did before the act. The next word is not or to. Keep it to one clause. About 1 in 20 sentences. Example: "She did not fill the column." It sits in the paragraphs about buyer, afternoon, hinge.
+- Open on someone already named, then put was, had, or did before the act. The next word is the main verb. Then hang a clause on because, as, if, that, or who. About 1 in 20 sentences. Example: "She had written the firing times in a book that smelled of ash." It sits in the paragraphs about ash, backs, evening.
+Sentences open with a determiner in about 4 in 10, a pronoun in about 3 in 10, a noun in about 1 in 10. Keep to those openings.
+Example: The pots on the upper rack were pale and dusty.
+
+Word. Glue words, as the source uses them: the about 12 in 100 words, and about 5, a about 4, of about 2, that about 2, to about 1, in about 1. by, from and upon are rare, under 1 in 100 words; use them only now and then. Against ordinary English prose, whose rate per 100 words is in brackets, the source uses more "the" (7), "and" (3), "a" (2), "that" (1); less "of" (4); under half the "to" (3), "in" (2). Hold to the source's rates, not the ordinary ones. These glue words carry the voice. Keep them at about those rates; a reply that drops them sounds clipped. upon is an older, formal word; the source uses it, so keep it, about as often as the source does.
+Keep these subject words: blank is an adjective, and also a noun; column is a noun; yard is a noun; book is a noun; buyer is a noun; third is an adjective; clay is a noun; enough is an adjective, and also an adverb. They name what this text is about, in those roles. Keep these names as written: Mr. Pell, Mrs. Adel, Dr. Hale, Thursday, Monday.
+Example: The book was in the inside pocket of her coat, and the third column was still blank, and the blank was still upon purpose.
+
+=== What goes to the bot: the flat reply versus the source ===
+The reply moved: it cut the sentences short, stopped joining clauses, dropped glue words, dropped subject words, lost some sentence shapes. Put the source shape back. Fix these in order.
+1. Sentence. A typical sentence was about 10 words and is now about 4. Short ones were about 6 and are 3; long ones were about 19 and are 4. Bring the typical sentence back to 9 to 11 words, and let about a quarter run 19 or more. Stop there; do not push past it.
+2. Sentence. In the source, about 4 in 10 sentences have two clauses, joined with and or hung on because or that; in the reply, none. Commas went from about 0.5 to 0 per sentence. Join neighbouring short sentences with ", and", "because", or "as" until 3 to 5 in 10 sentences have two clauses, and no more.
+3. Sentence. The source lets a clause pick up the last word of the clause before, about 2 times in 100 sentences; the reply never does. Do it once or twice, like this: "He said a blank looked like carelessness to a buyer, and a buyer was coming on Thursday, and Thursday was not a philosophical day."
+4. Sentence. The source follows a statement with a second reading of it, about once in 100 sentences; the reply never does. Do it once or twice, like this: "The not speaking was a kindness, or it was fatigue, and she decided she did not need to know which."
+5. Sentence. The source states a short general truth in the present tense, about once in 100 sentences; the reply never does. Do it once or twice, like this: "A plain order can be kept."
+6. Word. the was about 12 in 100 words and is about 8 in 100 words; aim for 10 to 14; and was about 5 in 100 words and is under 1 in 100 words; aim for 4 to 6; that was about 2 in 100 words and is under 1 in 100 words; aim for 1 to 3. Put them back to those rates and no higher; a reply without them sounds clipped.
+7. Content. The reply dropped these subject words: third is an adjective; clay is a noun; enough is an adjective, and also an adverb. It also dropped these names: Thursday, Monday. Keep names as written. Keep them when the subject stays.
+8. Paragraph 2. The reply says it in 7 sentences of about 3 words: "The yard filled. A boy dropped shelves." The source used 6 sentences of about 13 words, such as "A boy carried shelves from the shed to the wall and set them down too hard." Join the short ones until they read like that.
+Keep: the rate of of, to, a, in, upon, by; the level of the words; how paragraphs end; 13 paragraphs; the pronoun share.
+
+=== The repaired reply versus the source (misses 33 -> 18) ===
+The reply moved: it cut the sentences short, lost some sentence shapes. Put the source shape back. Fix these in order.
+1. Sentence. A typical sentence was about 10 words and is now about 9. Short ones were about 6 and are 7; long ones were about 19 and are 12. Bring the typical sentence back to 9 to 11 words, and let about a quarter run 19 or more. Stop there; do not push past it.
+2. Sentence. The source follows a statement with a second reading of it, about once in 100 sentences; the reply never does. Do it once or twice, like this: "The not speaking was a kindness, or it was fatigue, and she decided she did not need to know which."
+3. Sentence. The source states a short general truth in the present tense, about once in 100 sentences; the reply never does. Do it once or twice, like this: "A plain order can be kept."
+4. Word. the was about 12 in 100 words and is about 16 in 100 words; aim for 10 to 14. Use it less, down to that rate and no lower.
+5. Paragraph 11. The reply says it in 4 sentences of about 8 words: "She answered the letter at the bench. She wrote the date and the numbers." The source used 7 sentences of about 14 words, such as "She wrote that the bowls would be ready, and she did not write that the third column of her book was blank." The source paragraph has 3 sentences of 19 words or more; the reply has none. Join the short ones until they read like that.
+6. Paragraph 12. The reply says it in 5 sentences of about 8 words: "Evening came, and Mr. Pell opened the kiln a crack. The heat came out in a slow breath." The source used 6 sentences of about 14 words, such as "They were seen for a moment and then they were not, and the moment was enough to know that nothing had slumped and nothing had stuck." The source paragraph has 2 sentences of 19 words or more; the reply has none. Join the short ones until they read like that.
+7. Paragraph 5. The reply says it in 4 sentences of about 9 words: "The tea was too strong and the mugs did not match. One mug had a chip at the rim." The source used 6 sentences of about 15 words, such as "Dr. Hale, who was not a doctor of anything the yard sold, smiled at that and did not smile at the ledger." The source paragraph has 2 sentences of 19 words or more; the reply has none. Join the short ones until they read like that.
+8. Sentence. Open by naming the thing, then put was, had, or did before what it did. Keep it to one clause. The source opens about 2 in 10 sentences this way. The reply does it in a few. Put that shape back, like this: "The columns were for the room."
+Keep: how often sentences have two clauses; the clause that picks up a word; the rate of of, and, to, a, in, that; the level of the words; how paragraphs end; 13 paragraphs; the pronoun share.

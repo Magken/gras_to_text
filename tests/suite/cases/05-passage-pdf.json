@@ -1,0 +1,13 @@
+{
+  "name": "Passage PDF",
+  "file": "passage.pdf",
+  "tag": false,
+  "expect": {
+    "chapters": 0,
+    "sections": 0,
+    "minParagraphs": 1,
+    "minSentences": 15,
+    "tagged": false,
+    "phrase": "The passage under the kiln was narrow"
+  }
+}

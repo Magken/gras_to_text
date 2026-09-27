@@ -1,0 +1,19 @@
+{
+  "tools": [
+    {
+      "name": "profile",
+      "description": "Measure a text and return its profile.",
+      "input": { "text": "string" }
+    },
+    {
+      "name": "render",
+      "description": "Render a profile as prose or JSON. generate leaves out subject words and names; regenerate keeps them for a rewrite.",
+      "input": { "profile": "TextProfile", "view": "prose | json", "mode": "generate | regenerate" }
+    },
+    {
+      "name": "score",
+      "description": "Compare a reply to a profile and return the misses.",
+      "input": { "text": "string", "profile": "TextProfile" }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Essay",
+  "file": "essay.txt",
+  "tag": false,
+  "background": true,
+  "scoreSame": true,
+  "scoreAgainst": "essay-flat.txt",
+  "expect": {
+    "chapters": 0,
+    "sections": 0,
+    "minParagraphs": 13,
+    "minSentences": 86,
+    "rhythmSpread": true,
+    "wordIncludes": ["the", "of", "and", "upon"],
+    "wordExcludes": ["whilst"],
+    "keepsSentence": "Dr. Hale met Mr. Pell and Mrs. Adel before the noon bell, and they stood with their hands behind their backs as if the kiln might still be argued with.",
+    "tagged": false,
+    "shorter": true
+  }
+}

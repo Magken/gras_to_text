@@ -1,0 +1,17 @@
+{
+  "name": "Live essay",
+  "file": "essay.txt",
+  "tag": true,
+  "expect": {
+    "chapters": 0,
+    "sections": 0,
+    "minParagraphs": 13,
+    "minSentences": 86,
+    "tagged": true,
+    "opensWith": "determiner",
+    "patternIncludes": "then",
+    "wordIncludes": ["the", "upon"],
+    "wordExcludes": ["whilst"],
+    "usage": true
+  }
+}

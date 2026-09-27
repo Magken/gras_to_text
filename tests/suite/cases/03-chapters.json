@@ -1,0 +1,16 @@
+{
+  "name": "Chapters",
+  "file": "chapters.md",
+  "tag": false,
+  "scoreSame": true,
+  "expect": {
+    "chapters": 3,
+    "sections": 6,
+    "minParagraphs": 17,
+    "minSentences": 112,
+    "rhythmSpread": true,
+    "wordIncludes": ["the", "of", "and"],
+    "wordExcludes": ["whilst"],
+    "tagged": false
+  }
+}

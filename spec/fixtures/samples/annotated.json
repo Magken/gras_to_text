@@ -1,0 +1,25 @@
+{
+  "chapters": [
+    {
+      "title": "Platform",
+      "sections": [
+        {
+          "title": "The queue",
+          "paragraphs": [
+            "The queue kept its shape in the rain.",
+            "A man with a yellow bag waited under the awning."
+          ]
+        }
+      ]
+    }
+  ],
+  "paragraphs": [
+    {
+      "text": "The queue kept its shape in the rain. A man with a yellow bag waited under the awning.",
+      "sentences": [
+        { "text": "The queue kept its shape in the rain.", "tags": ["DT", "NN", "VBD", "PRP$", "NN", "IN", "DT", "NN"] },
+        { "text": "A man with a yellow bag waited under the awning.", "tags": ["DT", "NN", "IN", "DT", "JJ", "NN", "VBD", "IN", "DT", "NN"] }
+      ]
+    }
+  ]
+}

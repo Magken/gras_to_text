@@ -1,0 +1,18 @@
+{
+  "name": "Tagged book",
+  "file": "tagged.json",
+  "tag": false,
+  "expect": {
+    "chapters": 2,
+    "sections": 2,
+    "minParagraphs": 4,
+    "minSentences": 12,
+    "tagged": true,
+    "opensWith": "DT",
+    "patternIncludes": "Open by naming the thing, then say what it did.",
+    "pronounAbove": 0,
+    "passiveAbove": 0,
+    "wordIncludes": ["the"],
+    "usage": true
+  }
+}
