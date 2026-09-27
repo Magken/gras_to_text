@@ -168,6 +168,7 @@ Pass the mode to both calls: `render(sample, 'prose', { mode: 'regenerate' })` a
 gras_to_text/
 ├── LICENSE                   MIT
 ├── package.json              install, test, and commands at this folder
+├── CHANGELOG.md              what changed, and on which day
 ├── README.md                 this file
 ├── CONTRIBUTING.md           rules for people who change the code
 ├── AGENTS.md                 rules for coding bots that change the code

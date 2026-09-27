@@ -108,6 +108,16 @@ The blind tests are the evidence that the sheet works. They are slow and expensi
 
 A throwaway script for looking at data is named `.probe-<thing>.mjs`, sits beside the code it looks at, and is deleted before the pull request. If you write the same probe twice, turn it into a `*.unit.mjs` with a negative case.
 
+## Changelog
+
+`CHANGELOG.md` is the dated history of this package. Keep it current.
+
+1. When behaviour, commands, install, license, or public calls change, add a row the same day, at the top of the table.
+2. The date is `YYYY-MM-DD`. The text says what a user of the package would notice.
+3. Do not edit or delete older rows. A reversal is a new row.
+4. Do not skip the row because the GRAS indexer changelog was updated. This file is the package's own record.
+5. `tests/changelog.unit.mjs` checks that these rules are still written here and in `CHANGELOG.md`.
+
 ## Pull request checklist
 
 - [ ] `npm run check` passes.
@@ -118,3 +128,4 @@ A throwaway script for looking at data is named `.probe-<thing>.mjs`, sits besid
 - [ ] `spec/tools.json` still lists only `profile`, `render`, and `score`.
 - [ ] No probe files, no `_tmp-suite-results/`, no `node_modules/`.
 - [ ] `README.md` updated if a command, a folder, or the public calls changed.
+- [ ] `CHANGELOG.md` has a dated row for the change.

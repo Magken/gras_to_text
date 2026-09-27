@@ -12,6 +12,8 @@ const license = readFileSync(join(root, 'LICENSE'), 'utf8')
 const pkg = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8'))
 const ignore = readFileSync(join(root, '.gitignore'), 'utf8')
 const readme = readFileSync(join(root, 'README.md'), 'utf8')
+const changelog = readFileSync(join(root, 'CHANGELOG.md'), 'utf8')
+const dependabot = readFileSync(join(root, '.github/dependabot.yml'), 'utf8')
 
 assert.match(license, /MIT License/)
 assert.match(license, /Permission is hereby granted/)
@@ -30,6 +32,22 @@ assert.equal(
   readme.includes('fails on purpose'),
   false,
   'negative: npm test is not left red on purpose',
+)
+assert.match(changelog, /# Changelog/)
+assert.match(changelog, /\| Date \| Change \|/)
+assert.match(changelog, /2026-09-27/)
+assert.equal(
+  /\|\s*2099-/.test(changelog),
+  false,
+  'negative: changelog dates are days work actually landed',
+)
+assert.match(dependabot, /package-ecosystem:\s*npm/)
+assert.match(dependabot, /directory:\s*\/ts/)
+assert.match(dependabot, /interval:\s*weekly/)
+assert.equal(
+  /auto-?merge/i.test(dependabot),
+  false,
+  'negative: Dependabot must not auto-merge',
 )
 
 console.log('gras_to_text package: ok')

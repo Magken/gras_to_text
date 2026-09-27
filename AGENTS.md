@@ -6,7 +6,7 @@ You are editing gras_to_text, a standalone package. Read `README.md` for what it
 
 1. `README.md`, sections "Install from Git", "Using it", and "File structure".
 2. The source file you will change and its unit in `tests/` (same folder name, same file stem).
-3. `CONTRIBUTING.md`, section "Adding a measure", if you add or change a measure.
+3. `CONTRIBUTING.md`, section "Adding a measure", if you add or change a measure. Section "Changelog" if the change is user-visible.
 
 Do not read every file. Do not read `tests/suite/texts/` in full; the texts are long.
 
@@ -22,6 +22,7 @@ Do not read every file. Do not read `tests/suite/texts/` in full; the texts are 
 - `v1.ts` is not rewritten wholesale. A new approach is `v2.ts` beside it.
 - No commits, publishing, or `npm publish` unless the owner asks.
 - No new dependency unless the owner agrees.
+- When behaviour, commands, or install change, add a same-day row at the top of `CHANGELOG.md`. Do not rewrite old rows.
 
 ## Save time and tokens
 
@@ -59,5 +60,6 @@ PowerShell has no `&&`. Chain with `;`, and set variables with `$env:NAME='1'`.
 - `npm run check` passes.
 - The units you touched pass, and `npm test` passes.
 - `README.md` matches any changed command, folder, or public call.
+- `CHANGELOG.md` has a dated row for the change.
 - Probe files are deleted.
 - Your summary says what changed, what was tested, and what is still open, in plain words.
