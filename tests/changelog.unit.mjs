@@ -19,6 +19,8 @@ assert.match(changelog, /\| Date \| Change \|/)
 assert.match(contributing, /## Changelog/)
 assert.match(contributing, /Do not edit or delete older rows/)
 assert.match(agents, /CHANGELOG\.md/)
+assert.match(contributing, /## Releases/)
+assert.match(contributing, /Do not tag individual files/)
 assert.equal(
   contributing.includes('## Changelog') && contributing.indexOf('## Changelog') < contributing.indexOf('## Pull request checklist'),
   true,

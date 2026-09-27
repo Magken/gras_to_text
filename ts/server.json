@@ -3,12 +3,12 @@
   "name": "io.github.Magken/gras_to_text",
   "title": "GRAS to text",
   "description": "Measure a text and render how it is written.",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "@gras/gras_to_text",
-      "version": "0.0.0",
+      "version": "0.1.0",
       "transport": { "type": "stdio" }
     }
   ]

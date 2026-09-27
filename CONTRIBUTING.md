@@ -118,6 +118,10 @@ A throwaway script for looking at data is named `.probe-<thing>.mjs`, sits besid
 4. Do not skip the row because the GRAS indexer changelog was updated. This file is the package's own record.
 5. `tests/changelog.unit.mjs` checks that these rules are still written here and in `CHANGELOG.md`.
 
+## Releases
+
+A GitHub Release is one git tag (`v0.1.0`) on one commit. That commit is the whole repository at that version. Do not tag individual files. Do not tag every commit. Tag when you cut a version people can install (Git now, npm later). The number in `ts/package.json` must match the tag.
+
 ## Pull request checklist
 
 - [ ] `npm run check` passes.

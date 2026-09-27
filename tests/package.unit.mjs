@@ -14,6 +14,8 @@ const ignore = readFileSync(join(root, '.gitignore'), 'utf8')
 const readme = readFileSync(join(root, 'README.md'), 'utf8')
 const changelog = readFileSync(join(root, 'CHANGELOG.md'), 'utf8')
 const dependabot = readFileSync(join(root, '.github/dependabot.yml'), 'utf8')
+const tsPkg = JSON.parse(readFileSync(join(root, 'ts/package.json'), 'utf8'))
+const server = JSON.parse(readFileSync(join(root, 'ts/server.json'), 'utf8'))
 
 assert.match(license, /MIT License/)
 assert.match(license, /Permission is hereby granted/)
@@ -48,6 +50,14 @@ assert.equal(
   /auto-?merge/i.test(dependabot),
   false,
   'negative: Dependabot must not auto-merge',
+)
+assert.equal(tsPkg.version, '0.1.0')
+assert.equal(server.version, tsPkg.version)
+assert.equal(server.packages[0].version, tsPkg.version)
+assert.equal(
+  tsPkg.version === '0.0.0',
+  false,
+  'negative: a published GitHub version is not 0.0.0',
 )
 
 console.log('gras_to_text package: ok')
