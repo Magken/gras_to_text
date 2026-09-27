@@ -2,7 +2,7 @@
   "mcpServers": {
     "gras_to_text": {
       "command": "npx",
-      "args": ["--yes", "tsx", "ts/mcp.mjs"]
+      "args": ["-y", "@graslabs/gras_to_text"]
     }
   }
 }

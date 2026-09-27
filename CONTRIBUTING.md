@@ -130,6 +130,7 @@ A GitHub Release is one git tag (`v0.1.0`) on one commit. That commit is the who
 - [ ] Sheet or repair wording changed: `guideLines.unit.mjs` or `recommend.unit.mjs` covers it, and the stored output diff is explained.
 - [ ] Profile shape changed: `card.ts` and `card.schema.json` agree.
 - [ ] `spec/tools.json` still lists only `profile`, `render`, and `score`.
+- [ ] Public skill copies still match (`skills/gras-to-text/` including `references/`, `.cursor/skills/gras-to-text/`, `.claude/skills/gras-to-text/`).
 - [ ] No probe files, no `_tmp-suite-results/`, no `node_modules/`.
 - [ ] `README.md` updated if a command, a folder, or the public calls changed.
 - [ ] `CHANGELOG.md` has a dated row for the change.

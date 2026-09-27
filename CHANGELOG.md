@@ -12,6 +12,11 @@ Dated notes for this package. Newest first.
 
 | Date | Change |
 |------|--------|
+| 2026-09-27 | `@graslabs/gras_to_text` `0.1.1` on npmjs.com. GitHub tag `v0.1.1`. The tarball includes the local skill. |
+| 2026-09-27 | Local skill only. No Cursor plugin. The skill ships inside the npm package under `skills/`. If asked, the agent copies it to `.cursor/skills/`. |
+| 2026-09-27 | Agent skill covers the clone: layout, commands, tests, and edit rules, with flag and folder maps in `skills/gras-to-text/references/`. |
+| 2026-09-27 | Public Agent Skill and plugin (`plugin.json`, `skills/gras-to-text/`, Cursor and Claude copies). Installing it loads how to use `profile`, `render`, and `score`, and starts MCP with `npx -y @graslabs/gras_to_text`. |
+| 2026-09-27 | Public npm package `@graslabs/gras_to_text` `0.1.0`. Git clone still works. |
 | 2026-09-27 | GitHub Release `v0.1.0`. One tag for the published version, not a tag per file. |
 | 2026-09-27 | Dependabot opens weekly pull requests for npm packages in `ts/`. Alerts and security-fix PRs are on. Merge is still manual. |
 | 2026-09-27 | Changelog rules: same-day row, newest first, no rewriting of old rows. |

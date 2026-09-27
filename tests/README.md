@@ -16,7 +16,7 @@
 | `cli.unit.mjs` | Command flags, output paths, and writing `output/*.md`. |
 | `changelog.unit.mjs` | Changelog rules are written in `CHANGELOG.md` and `CONTRIBUTING.md`. |
 | `mcp.unit.mjs` | Tools `profile`, `render`, `score`; a spawned `mcp.mjs` process lists them. |
-| `package.unit.mjs` | MIT license, clone install at the package root, papers gitignored. |
+| `package.unit.mjs` | MIT license, clone install, local skill copies, skill ships in the npm tarball, no Cursor plugin. |
 | `samples.unit.mjs` | A short printed sample. The long run is `suite/`. |
 | `tag.live.mjs` | Tags one sentence with the model. Not part of `npm test`. |
 

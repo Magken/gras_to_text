@@ -7,3 +7,4 @@ research/papers/
 py/.venv/
 output/*
 !output/.gitkeep
+ts/skills/

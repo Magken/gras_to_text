@@ -1,18 +1,37 @@
 {
-  "name": "@gras/gras_to_text",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@graslabs/gras_to_text",
+  "version": "0.1.1",
   "license": "MIT",
   "description": "Measure a text and render how it is written.",
   "type": "module",
   "mcpName": "io.github.Magken/gras_to_text",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Magken/gras_to_text.git"
+  },
+  "homepage": "https://github.com/Magken/gras_to_text",
+  "bugs": {
+    "url": "https://github.com/Magken/gras_to_text/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "src",
+    "skills",
+    "start-mcp.mjs",
+    "cli.mjs",
+    "mcp.mjs",
+    "server.json"
+  ],
   "bin": {
-    "gras-to-text-mcp": "./dist/mcp.js"
+    "gras-to-text-mcp": "./start-mcp.mjs"
   },
   "exports": {
     ".": "./src/index.ts"
   },
   "scripts": {
+    "prepublishOnly": "node copy-npm-docs.mjs",
     "check": "tsc --noEmit",
     "profile": "tsx cli.mjs profile",
     "score": "tsx cli.mjs score",
@@ -23,13 +42,13 @@
   },
   "devDependencies": {
     "@types/node": "^26.6.3",
-    "tsx": "^4.20.5",
     "typescript": "^5.9.2"
   },
   "dependencies": {
     "@huggingface/transformers": "^4.3.0",
     "@modelcontextprotocol/sdk": "^1.30.1",
     "mammoth": "^1.12.3",
+    "tsx": "^4.20.5",
     "unpdf": "^1.8.1",
     "zod": "^4.6.5"
   }

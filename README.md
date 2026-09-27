@@ -39,9 +39,17 @@ flowchart LR
 5. **Score.** `score` profiles the reply and lists every gap against the sample profile.
 6. **Repair.** `reportMisses` turns the gaps into at most eight fixes, largest first, and names what already matches.
 
-## Install from Git
+## Install
 
-Node 20 or later. Clone, then install from the repository root. That installs the TypeScript package under `ts/`.
+```bash
+npm install @graslabs/gras_to_text
+```
+
+Node 20 or later. The license is MIT (`LICENSE`).
+
+### From Git
+
+Clone, then install from the repository root. That installs the TypeScript package under `ts/`.
 
 ```bash
 git clone https://github.com/Magken/gras_to_text.git
@@ -53,7 +61,13 @@ All commands below start in this folder. They forward into `ts/`. The first run 
 
 If you are still inside the GRAS monorepo, `cd projects/gras_to_text` and run the same commands.
 
-This package is not on npm yet. Git is the install path. The license is MIT (`LICENSE`).
+### Agent skill (Cursor and Claude)
+
+This is a local skill, not a Cursor marketplace plugin. Clone the repo and Cursor loads `.cursor/skills/gras-to-text/`. Claude Code loads `.claude/skills/gras-to-text/`.
+
+After `npm install @graslabs/gras_to_text`, the skill also sits in `node_modules/@graslabs/gras_to_text/skills/gras-to-text/`. Cursor does not index `node_modules`. If you ask the agent to install the skill, it copies that folder to `.cursor/skills/gras-to-text/` in the current project.
+
+MCP is separate: copy `spec/mcp.example.json` into `.cursor/mcp.json` (start command `npx -y @graslabs/gras_to_text`).
 
 ## Using it
 
@@ -63,7 +77,7 @@ Two ways: import the functions in your own code, or run the commands. They do th
 
 ```ts
 import { readFileSync, writeFileSync } from 'node:fs'
-import { addToDictionary, buildDictionary, dictionaryFromJson, dictionaryToJson, profile, render, reportMisses, score } from '@gras/gras_to_text'
+import { addToDictionary, buildDictionary, dictionaryFromJson, dictionaryToJson, profile, render, reportMisses, score } from '@graslabs/gras_to_text'
 
 const sample = await profile({ path: 'essay.txt' }, { tag: true })
 const sheet = render(sample)
@@ -136,7 +150,7 @@ And a repair line from a reply that drifted:
 
 The server is a local process. Cursor does not clone GitHub to get the tools. Copy `spec/mcp.example.json` into the other project's `.cursor/mcp.json` (or merge the `gras_to_text` block). Restart MCP in that project. The agent then has `profile`, `render`, and `score`.
 
-Until the package is on npm, the command runs `tsx` on `ts/mcp.mjs` on this machine. After `npm publish`, the command becomes `npx -y @gras/gras_to_text`.
+Copy `spec/mcp.example.json` into the other project's `.cursor/mcp.json` (or merge the `gras_to_text` block). Restart MCP in that project. The agent then has `profile`, `render`, and `score`. The start command is `npx -y @graslabs/gras_to_text`. A local clone can still run `tsx ts/mcp.mjs`.
 
 ## Modes
 
@@ -172,6 +186,9 @@ gras_to_text/
 ├── README.md                 this file
 ├── CONTRIBUTING.md           rules for people who change the code
 ├── AGENTS.md                 rules for coding bots that change the code
+├── skills/gras-to-text/      local Agent Skill (SKILL.md)
+├── .cursor/skills/           same skill for a Cursor clone
+├── .claude/skills/           same skill for a Claude Code clone
 ├── spec/
 │   ├── card.schema.json      the profile shape; every package must emit this
 │   ├── tools.json            MCP tools: profile, render, score
@@ -292,7 +309,7 @@ Style means how many measured targets the story missed. Delta is Burrows Delta o
 
 - English only. `semantic` and `language` are empty. Character n-grams (`measures/ngrams.ts`) are not built.
 - The essay passes every blind test, including steering. The Austen sample passes on style and Delta. Austen steering is counted in the report (currently 2 of 4) and is not a pass or fail, because writers still keep ordinary rates for "the" and "of".
-- MIT license. Private on npm. Clone it with Git (see Install from Git). The MCP server runs locally (`npm run mcp`). It is not on the MCP Registry yet.
+- MIT license. Public on npm as `@graslabs/gras_to_text`. Clone it with Git (see Install). The MCP server runs locally (`npx -y @graslabs/gras_to_text` or `npm run mcp`). It is not on the MCP Registry yet.
 
 ## Contributing
 
